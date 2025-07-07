@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 from datetime import timedelta
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -63,6 +64,7 @@ SIMPLE_JWT = {
 }
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -70,12 +72,15 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+    
 ]
 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173", # Ajusta esto si tu frontend está en otro puerto
+    #"http://localhost:5173", # Ajusta esto si tu frontend está en otro puerto
+    "https://frontend-webpablo.vercel.app",
+    "https://frontend-webpablo-qey3xr9uk-josesv11s-projects.vercel.app",
+
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -105,16 +110,19 @@ AUTH_USER_MODEL = 'users.CustomUser'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ecommerce_db',
-        'USER': 'postgres',  # Usuario configurado
-        'PASSWORD': 'password',  # Contraseña configurada al instalar PostgreSQL
-        'HOST': 'localhost',  # Servidor local
-        'PORT': '5432',       # Puerto predeterminado
+        'NAME': 'railway',  # PGDATABASE
+        'USER': 'postgres',  # PGUSER
+        'PASSWORD': 'toBQOykvlgVqOVFztGcjiLwFcScLbHBt',  # PGPASSWORD
+        'HOST': 'postgres.railway.internal',  # PGHOST
+        'PORT': '5432',  # PGPORT
     }
 }
+
+
 # esperenxd
 
 # Password validation
