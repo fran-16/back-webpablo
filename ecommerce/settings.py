@@ -77,9 +77,7 @@ MIDDLEWARE = [
 
 
 CORS_ALLOWED_ORIGINS = [
-    #"http://localhost:5173", # Ajusta esto si tu frontend está en otro puerto
-    "https://frontend-webpablo.vercel.app",
-    "https://frontend-webpablo-qey3xr9uk-josesv11s-projects.vercel.app",
+    "http://localhost:5173", # Ajusta esto si tu frontend está en otro puerto
 
 ]
 
