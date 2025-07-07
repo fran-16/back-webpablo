@@ -111,12 +111,12 @@ AUTH_USER_MODEL = 'users.CustomUser'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',  # PGDATABASE
-        'USER': 'postgres',  # PGUSER
-        'PASSWORD': 'toBQOykvlgVqOVFztGcjiLwFcScLbHBt',  # PGPASSWORD
-        'HOST': 'postgres.railway.internal',  # PGHOST
-        'PORT': '5432',  # PGPORT
+       'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ecommerce_db',
+        'USER': 'postgres',  # Usuario configurado
+        'PASSWORD': 'password',  # Contraseña configurada al instalar PostgreSQL
+        'HOST': 'localhost',  # Servidor local
+        'PORT': '5432',       # Puerto predeterminado
     }
 }
 
